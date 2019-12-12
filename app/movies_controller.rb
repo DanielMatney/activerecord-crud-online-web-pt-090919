@@ -75,7 +75,7 @@ end
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
-  m = Movie.update(title: "Wat?",title: "Wat, huh?")
+  m = Movie.update(1, :title => "Wat, huh?")
   m.save
 end
 
