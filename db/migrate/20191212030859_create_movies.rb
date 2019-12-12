@@ -1,9 +1,10 @@
 class CreateMovies < ActiveRecord::Migration[5.2]
   def change
-    add_column :movie, :title, :string
-    add_column :movie, :release_date, :datetime
-    add_column :movie, :director, :string
-    add_column :movie, :lead, :string
-    add_column :movie, :in_theaters, :boolean
+    create_table :movies do |c|
+      c.string :title
+      c.datetime :release_date
+      c.string :director
+      c.string :lead
+      c.boolean :in_theaters
   end
 end
